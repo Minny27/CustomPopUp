@@ -13,6 +13,9 @@
 		562C9AA526244C61003EB548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 562C9AA326244C61003EB548 /* Main.storyboard */; };
 		562C9AA726244C61003EB548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 562C9AA626244C61003EB548 /* Assets.xcassets */; };
 		562C9AAA26244C61003EB548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 562C9AA826244C61003EB548 /* LaunchScreen.storyboard */; };
+		56DA409C26244E5800B9E0E2 /* PopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56DA409B26244E5800B9E0E2 /* PopUp.storyboard */; };
+		56DA40A4262492C300B9E0E2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DA40A3262492C300B9E0E2 /* WebKit.framework */; };
+		56DA40A72624A5E500B9E0E2 /* CustomViewPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA409F26248CB100B9E0E2 /* CustomViewPopUpController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		562C9AA626244C61003EB548 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		562C9AA926244C61003EB548 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		562C9AAB26244C61003EB548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56DA409B26244E5800B9E0E2 /* PopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUp.storyboard; sourceTree = "<group>"; };
+		56DA409F26248CB100B9E0E2 /* CustomViewPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewPopUpController.swift; sourceTree = "<group>"; };
+		56DA40A3262492C300B9E0E2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56DA40A4262492C300B9E0E2 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,7 @@
 			children = (
 				562C9A9C26244C61003EB548 /* CustomPopUp */,
 				562C9A9B26244C61003EB548 /* Products */,
+				56DA40A2262492C300B9E0E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +67,22 @@
 				562C9A9D26244C61003EB548 /* AppDelegate.swift */,
 				562C9A9F26244C61003EB548 /* SceneDelegate.swift */,
 				562C9AA126244C61003EB548 /* ViewController.swift */,
+				56DA409F26248CB100B9E0E2 /* CustomViewPopUpController.swift */,
 				562C9AA326244C61003EB548 /* Main.storyboard */,
+				56DA409B26244E5800B9E0E2 /* PopUp.storyboard */,
 				562C9AA626244C61003EB548 /* Assets.xcassets */,
 				562C9AA826244C61003EB548 /* LaunchScreen.storyboard */,
 				562C9AAB26244C61003EB548 /* Info.plist */,
 			);
 			path = CustomPopUp;
+			sourceTree = "<group>";
+		};
+		56DA40A2262492C300B9E0E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56DA40A3262492C300B9E0E2 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +145,7 @@
 				562C9AAA26244C61003EB548 /* LaunchScreen.storyboard in Resources */,
 				562C9AA726244C61003EB548 /* Assets.xcassets in Resources */,
 				562C9AA526244C61003EB548 /* Main.storyboard in Resources */,
+				56DA409C26244E5800B9E0E2 /* PopUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56DA40A72624A5E500B9E0E2 /* CustomViewPopUpController.swift in Sources */,
 				562C9AA226244C61003EB548 /* ViewController.swift in Sources */,
 				562C9A9E26244C61003EB548 /* AppDelegate.swift in Sources */,
 				562C9AA026244C61003EB548 /* SceneDelegate.swift in Sources */,
