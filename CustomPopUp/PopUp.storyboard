@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMX-Fz-XoJ" userLabel="ContentView">
-                                <rect key="frame" x="82" y="298" width="250" height="300"/>
+                                <rect key="frame" x="82" y="248" width="250" height="400"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="My_Image" translatesAutoresizingMaskIntoConstraints="NO" id="X7Y-gf-6Rq">
                                         <rect key="frame" x="65" y="20" width="120" height="120"/>
@@ -27,17 +27,78 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요 이승민입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPq-Qx-Ofg">
-                                        <rect key="frame" x="39.5" y="148" width="171" height="21"/>
+                                        <rect key="frame" x="39.5" y="148" width="171" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반갑습니다. ^^" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIx-mI-3L4">
-                                        <rect key="frame" x="73" y="177" width="104" height="21"/>
+                                        <rect key="frame" x="73.5" y="176.5" width="103.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="y5c-cl-hJz">
+                                        <rect key="frame" x="65" y="267" width="120" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eer-nl-nWr">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="boQ-lg-tju"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="승민이 블로그">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onBlogBtnClicked:" destination="NOl-ky-DlX" eventType="touchUpInside" id="yEY-gw-NGF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xF1-Yq-bw1">
+                                                <rect key="frame" x="0.0" y="44" width="120" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="qg7-A6-csh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="오픈카카오톡">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onOpenChatBtnClicked:" destination="NOl-ky-DlX" eventType="touchUpInside" id="9MT-JM-xge"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAD-Eb-i2x">
+                                                <rect key="frame" x="0.0" y="84" width="120" height="36"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="r8C-Qu-ll4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="좋아요">
+                                                    <color key="titleColor" systemColor="systemGray6Color"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onSubscribeBtnClicked:" destination="NOl-ky-DlX" eventType="touchUpInside" id="LH2-QE-0JE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="aAD-Eb-i2x" firstAttribute="top" secondItem="xF1-Yq-bw1" secondAttribute="bottom" constant="28" id="5tL-TX-yVk"/>
+                                            <constraint firstAttribute="height" constant="120" id="Cg7-lU-xtr"/>
+                                            <constraint firstItem="aAD-Eb-i2x" firstAttribute="top" secondItem="xF1-Yq-bw1" secondAttribute="bottom" constant="28" id="PZ1-aB-LER"/>
+                                            <constraint firstItem="aAD-Eb-i2x" firstAttribute="top" secondItem="xF1-Yq-bw1" secondAttribute="bottom" constant="28" id="lmb-DN-H4T"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NV1-FD-xK5" userLabel="bgbtn">
+                                        <rect key="frame" x="-157" y="-247" width="414" height="647"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onBgBtnClicked:" destination="NOl-ky-DlX" eventType="touchUpInside" id="UjH-8g-naF"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -46,53 +107,33 @@
                                     <constraint firstItem="MIx-mI-3L4" firstAttribute="top" secondItem="oPq-Qx-Ofg" secondAttribute="bottom" constant="8" id="88o-lv-bSi"/>
                                     <constraint firstItem="X7Y-gf-6Rq" firstAttribute="centerX" secondItem="oMX-Fz-XoJ" secondAttribute="centerX" id="HD9-c1-fSV"/>
                                     <constraint firstItem="X7Y-gf-6Rq" firstAttribute="top" secondItem="oMX-Fz-XoJ" secondAttribute="top" constant="20" id="Hsl-AD-30K"/>
+                                    <constraint firstAttribute="bottom" secondItem="NV1-FD-xK5" secondAttribute="bottom" constant="2" id="JDE-tz-h8z"/>
                                     <constraint firstItem="oPq-Qx-Ofg" firstAttribute="top" secondItem="X7Y-gf-6Rq" secondAttribute="bottom" constant="8" symbolic="YES" id="M16-Vn-Lnl"/>
+                                    <constraint firstItem="y5c-cl-hJz" firstAttribute="top" secondItem="MIx-mI-3L4" secondAttribute="bottom" constant="70" id="UA4-YI-otI"/>
+                                    <constraint firstAttribute="bottom" secondItem="y5c-cl-hJz" secondAttribute="bottom" constant="300" id="doK-7C-bJ8"/>
+                                    <constraint firstItem="y5c-cl-hJz" firstAttribute="leading" secondItem="oMX-Fz-XoJ" secondAttribute="leading" constant="65" id="esb-KH-x5g"/>
                                     <constraint firstItem="oPq-Qx-Ofg" firstAttribute="top" secondItem="X7Y-gf-6Rq" secondAttribute="bottom" constant="8" id="gUu-Vu-Pzo"/>
-                                    <constraint firstAttribute="height" constant="300" id="i8J-7K-RVY"/>
+                                    <constraint firstAttribute="height" constant="400" id="i8J-7K-RVY"/>
                                     <constraint firstItem="X7Y-gf-6Rq" firstAttribute="centerX" secondItem="oMX-Fz-XoJ" secondAttribute="centerX" id="laS-zL-0ai"/>
+                                    <constraint firstAttribute="trailing" secondItem="y5c-cl-hJz" secondAttribute="trailing" constant="65" id="o6W-jA-iEX"/>
                                     <constraint firstAttribute="width" constant="250" id="p2O-jv-8EX"/>
+                                    <constraint firstAttribute="bottom" secondItem="y5c-cl-hJz" secondAttribute="bottom" constant="13" id="t5r-pq-tUS"/>
+                                    <constraint firstItem="NV1-FD-xK5" firstAttribute="top" secondItem="oMX-Fz-XoJ" secondAttribute="top" constant="-249" id="yXM-5y-jmC"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NV1-FD-xK5" userLabel="bgbtn">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onBgBtnClicked:" destination="NOl-ky-DlX" eventType="touchUpInside" id="UjH-8g-naF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAD-Eb-i2x">
-                                <rect key="frame" x="147" y="535" width="120" height="36"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="r8C-Qu-ll4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="좋아요">
-                                    <color key="titleColor" systemColor="systemGray6Color"/>
-                                </state>
-                                <connections>
-                                    <action selector="onSubscribeBtnClicked:" destination="NOl-ky-DlX" eventType="touchUpInside" id="LH2-QE-0JE"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TDh-Af-s8D"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="NV1-FD-xK5" secondAttribute="bottom" id="0oI-TN-XoJ"/>
-                            <constraint firstItem="NV1-FD-xK5" firstAttribute="top" secondItem="6Je-Pu-vm5" secondAttribute="top" id="2Px-LN-3yg"/>
                             <constraint firstItem="oMX-Fz-XoJ" firstAttribute="centerY" secondItem="6Je-Pu-vm5" secondAttribute="centerY" id="9oK-7g-P5z"/>
-                            <constraint firstItem="oMX-Fz-XoJ" firstAttribute="bottom" secondItem="aAD-Eb-i2x" secondAttribute="bottom" constant="27" id="EFC-ew-AqB"/>
                             <constraint firstItem="oMX-Fz-XoJ" firstAttribute="centerX" secondItem="TDh-Af-s8D" secondAttribute="centerX" id="FuK-WU-n9s"/>
-                            <constraint firstItem="NV1-FD-xK5" firstAttribute="trailing" secondItem="TDh-Af-s8D" secondAttribute="trailing" id="Gzm-b8-SBh"/>
-                            <constraint firstItem="aAD-Eb-i2x" firstAttribute="centerX" secondItem="TDh-Af-s8D" secondAttribute="centerX" id="XBm-4C-2Mk"/>
-                            <constraint firstItem="NV1-FD-xK5" firstAttribute="leading" secondItem="TDh-Af-s8D" secondAttribute="leading" id="d8k-qU-pZ2"/>
-                            <constraint firstItem="aAD-Eb-i2x" firstAttribute="centerX" secondItem="TDh-Af-s8D" secondAttribute="centerX" id="mnv-JH-IBw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bgBtn" destination="NV1-FD-xK5" id="Un2-Fk-4I9"/>
+                        <outlet property="blogBtn" destination="eer-nl-nWr" id="6yn-PY-7Cp"/>
                         <outlet property="contentView" destination="oMX-Fz-XoJ" id="PVT-d8-Fm3"/>
+                        <outlet property="openChatBtn" destination="xF1-Yq-bw1" id="EKs-X2-D6u"/>
                         <outlet property="subscribeBtn" destination="aAD-Eb-i2x" id="8wB-pM-Wws"/>
                     </connections>
                 </viewController>
@@ -112,6 +153,12 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
