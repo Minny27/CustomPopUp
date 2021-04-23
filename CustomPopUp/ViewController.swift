@@ -59,6 +59,8 @@ class ViewController: UIViewController, PopUpDelegate {
         // 하지만 present는 현재의 뷰컨트롤러에서 다른 뷰컨트롤러가 바로 보임
         // 팝업띄우기 버튼을 눌렀을 때 다음 나오는 화면 호출
         self.present(customAlertPopUpVC, animated: true, completion: nil)
+        // 새로운 화면이 출력되면 버튼은 안 보이게 하기
+        createPopUpBtn.isHidden = true
     }
     
     // MARK: PopUpDelegate Method
