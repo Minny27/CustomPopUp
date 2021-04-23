@@ -50,7 +50,7 @@ class ViewController: UIViewController, PopUpDelegate {
             self.myWebView.load(URLRequest(url: myChannelUrl!))
         }
         
-        // self는 PopUpDelegate을 의미
+        // self는 PopUpDelegate을 의미 
         customAlertPopUpVC.myPopUpDelegate = self
         
         
